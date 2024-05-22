@@ -1,0 +1,75 @@
+.plans {
+ padding-top: var(--padding-top);
+ padding-bottom: var(--padding-bottom);
+ position: relative;
+ text-align: center;
+}
+.plans .container {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+ gap: 30px; color: white;
+}
+.plans .box {
+    color: white;
+ background-image: linear-gradient(rgb(210, 224, 210),rgb(41, 85, 105)) ;
+ border-radius: 5px;
+ box-shadow: 0 0 5px rgba(160, 159, 159, 0.473);
+}
+.plans .box .title {
+ padding-top: 10px;
+color: black;
+ font-weight: bolder;
+ font-size: 40px;
+}
+.plans .box img {
+ width: 20%;
+ padding: 10px;
+ filter: hue-rotate(342deg);
+}
+.plans .box .price {
+ display: flex;
+ flex-direction: column;
+ padding: 10px;
+ align-items: center;
+ justify-content: center;
+}
+.plans .box .price span:first-child {
+ font-size: 50px;
+ font-weight: bolder;
+
+}
+.plans .box .price span:last-child {
+ padding: 10px;
+ color: white;
+}
+.plans .box li {
+ text-align: left;
+ border-top: 1px solid rgb(138, 138, 138);
+ padding: 20px;
+ color: white;
+ font-weight: bold;
+ 
+}
+
+.plans .box div:last-child {
+ transition: 0.5s;
+ padding: 10px 5px 10px 5px;
+ color: rgb(255, 255, 255);
+ font-weight: bold;
+ width: fit-content;
+ cursor: pointer;
+ margin: auto;
+ border: 2px solid var(--maincolor);
+ border-radius: 4px;
+ margin-bottom: 1rem;
+}
+.plans .box div:last-child:hover {
+ color: var(--maincolor);
+ font-size: 17px;
+}
+
+@media(max-width:976px) {
+
+
+    .plans  .box li{text-align: center;}
+}

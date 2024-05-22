@@ -1,0 +1,61 @@
+.teammembers {
+ padding-top: var(--padding-top);
+ padding-bottom: var(--padding-bottom);
+ position: relative;
+}
+.teammembers .container {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+ gap: 50px;
+}
+.teammembers .box {
+ position: relative;
+ padding: 20px;
+ transition: 0.5s;
+}
+.teammembers .box::before {
+ content: "";
+ position: absolute;
+ width: calc(100% - 60px);
+ z-index: -2;
+ border-radius: 10px;
+ top: 0;
+ right: 0;
+ height: 100%;
+ background-color: rgb(226, 229, 231);
+}
+
+.teammembers .box::after {
+ content: "";
+ position: absolute;
+ border-radius: 10px;
+ width: 0;
+ height: 100%;
+ background-color: var(--maincolor);
+ top: 0;
+ z-index: -1;
+ right: 0;
+ transition: 0.5s;
+}
+.teammembers .box:hover::after {
+ width: calc(100% - 60px);
+}
+.teammembers .box:hover img {
+ filter: brightness(120%);
+}
+.teammembers .box:hover h3 {
+ color: white;
+}
+.teammembers .info h3 {
+ padding: 15px 0;
+ color: var(--maincolor);
+ transition: 0.5s;
+}
+.teammembers .data img {
+ border-radius: 5px;
+ max-width: 100%;
+ transition: 0.5s;
+}
+.teammembers .info {
+ padding-left: 80px;
+}

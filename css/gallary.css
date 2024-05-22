@@ -1,0 +1,45 @@
+.gallary {
+  background-color: #ececec;
+  padding: 20px;
+}
+.gallary .container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.gallary .box {
+  background-color: white;
+}
+.gallary .image {
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.gallary img {
+  max-width: 100%;
+}
+ .gallary .box .image:hover::before{
+    content: "";
+    position: absolute;
+top: 50%;
+left: 50%;
+background-color: rgb(255, 255, 255);
+width: 0px;
+height: 0px;
+opacity: 0;
+transform: translate(-50%,-50%);
+animation: flashing 0.7s;
+}
+.gallary .box .image:hover{
+    transform:rotate(5deg) scale(1.1);
+}
+
+
+@keyframes flashing{
+0%,40%{opacity: 1;}
+100%{opacity: 0;
+width: 200%;
+height: 200%;}
+
+}

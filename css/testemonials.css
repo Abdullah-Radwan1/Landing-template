@@ -1,0 +1,40 @@
+.testemonials {
+ padding-top: var(--padding-top);
+ padding-bottom: var(--padding-bottom);
+ position: relative;
+}
+.testemonials .container {
+ display: grid;
+
+ gap: 50px;
+ grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.testemonials .box {
+ padding: 20px;
+ position: relative;
+ background-color: white;
+ box-shadow: 0 0 10px var(--secondary);
+ border-radius: 5px;
+}
+.testemonials img {
+ position: absolute;
+ width: 80px;
+ height: 80px;
+ right: -27px;
+ top: -40px;
+ border-radius: 50%;
+ border: 10px solid var(--primary);
+}
+
+@media (max-width: 767px) {
+ .testemonials img {
+  right: -15px;
+ }
+}
+.testemonials h3 {
+ color: var(--maincolor);
+}
+.testemonials p {
+ margin: 20px 0;
+ width: fit-content;
+}
